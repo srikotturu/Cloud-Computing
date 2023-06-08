@@ -1,5 +1,6 @@
 # MapReduce Fully Inverted Index
 This repository contains a Java program that implements a fully inverted index using the MapReduce framework. The program takes a collection of text files as input and generates an inverted index, which is a data structure that maps each unique word in the input files to the list of files in which it appears.
+[Inverted Index (Google Slides)](https://docs.google.com/presentation/d/19Nw1BS3IHzfDBMZ0l_q4k1pO9YBWSG5_eKVzgwFgAm8/edit?usp=sharing)
 
 # Description
 The fully inverted index is a popular data structure used in information retrieval systems. It allows efficient searching and retrieval of documents based on the words they contain. This program utilizes the power of MapReduce to create an inverted index for a given set of text files.
