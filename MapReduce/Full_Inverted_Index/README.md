@@ -1,5 +1,6 @@
 # MapReduce Fully Inverted Index
 This repository contains a Java program that implements a fully inverted index using the MapReduce framework. The program takes a collection of text files as input and generates an inverted index, which is a data structure that maps each unique word in the input files to the list of files in which it appears.
+
 [Inverted Index (Google Slides)](https://docs.google.com/presentation/d/19Nw1BS3IHzfDBMZ0l_q4k1pO9YBWSG5_eKVzgwFgAm8/edit?usp=sharing)
 
 ## Description
@@ -44,7 +45,7 @@ bin/hdfs dfs -mkdir /user/username
 bin/hdfs dfs -mkdir /user/username/index
 bin/hdfs dfs -mkdir /user/username/index/input
 bin/hdfs dfs -put ../index/input/* /user/username/index/input
-bin/hdfs dfs -ls /user/skotturu655/index/input
+bin/hdfs dfs -ls /user/username/index/input
 bin/hadoop com.sun.tools.javac.Main ../index/InvertedIndex.java
 cp ../index/*.class .
 cp ../index/*.java .
