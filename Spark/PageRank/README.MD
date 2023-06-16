@@ -3,7 +3,7 @@ The objective of PageRank is to assign a numerical importance score to each webp
 
  [PageRank (Google Slides)](https://docs.google.com/presentation/d/1w5igZVfMjyY0ulmTlMfJGvTvrOv2ox6MTZANLD75UdM/edit?usp=sharing)
  
-# Description
+# Introduction
 
 PageRank, is an algorithm developed by Larry Page and Sergey Brin, the founders of Google. PageRank is a fundamental component of web search and plays a vital role in determining the relevance and importance of web pages.
 
