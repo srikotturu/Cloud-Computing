@@ -1,11 +1,11 @@
 # PageRank
-The objective of this project is to implement a distributed computing model using PySpark on Google Cloud Platform (GCP) for calculating the value of pi.
+The objective of PageRank is to assign a numerical importance score to each webpage in a web graph based on its connectivity and the importance of the pages linking to it. The algorithm aims to determine the significance and relevance of web pages within the overall network of interlinked pages.
 
- [Project Pi (Google Slides)](https://docs.google.com/presentation/d/1kydfigjA3PDWXfdRqKuzpYE8SLluslSmDUxsk6vPMkY/edit?usp=sharing)
+ [PageRank (Google Slides)](https://docs.google.com/presentation/d/1w5igZVfMjyY0ulmTlMfJGvTvrOv2ox6MTZANLD75UdM/edit?usp=sharing)
  
 # Description
 
-PageRank,is  an algorithm developed by Larry Page and Sergey Brin, the founders of Google. PageRank is a fundamental component of web search and plays a vital role in determining the relevance and importance of web pages.
+PageRank, is an algorithm developed by Larry Page and Sergey Brin, the founders of Google. PageRank is a fundamental component of web search and plays a vital role in determining the relevance and importance of web pages.
 
 At its core, PageRank is designed to address the challenge of organizing and ranking the vast amount of information available on the internet. The algorithm assigns a numerical value, known as the PageRank score, to each web page. This score represents the importance and authority of the page in the web graph. The more high-quality and authoritative pages that link to a particular page, the higher its PageRank score.
 
@@ -13,17 +13,17 @@ At its core, PageRank is designed to address the challenge of organizing and ran
 # Design
 
 
-The Process of Calculating PageRank:
+The Process of Calculating PageRank :
 
 * Initialize each page's rank to 1.0:
 
 At the beginning of the algorithm, assign an initial rank of 1.0 to every page in the web graph.
 
-* Iterative contribution calculation:
+* Iterative contribution calculation :
 
 On each iteration, each page (p) sends a contribution of rank(p) divided by the number of neighbors (pages it has links to) to its neighbors.
 The contribution represents the proportion of the current page's rank that it distributes to its neighboring pages.
-* Update each page's rank:
+* Update each page's rank :
 
 After receiving contributions from its neighbors, each page's rank is updated using the formula: rank = 0.15 + 0.85 * contributionsReceived.
 
@@ -37,13 +37,12 @@ The more Input Web Pages the better.
 
 The higher PageRank of an Input Web Page the better.
 
-
-
 # Implementation
 
 ## Requirements
 
 * DataProc on GCP:
+
 <img src="./img/cluster.png" alt="GCP" width="700"/>
 
 ## To create and save the spark job python file:
@@ -53,7 +52,7 @@ corner of the Cloud Shell window.
 3. Click on the new file icon beside your username to create a new file.
 Here’s the Python code, I used:
 
-Save the file. I saved it as pi.py and close the shell. 
+Save the file. I saved it as pagerank.py and close the shell. 
 
 
 ## To Run the PySpark Job on Google Cloud Dataproc :
@@ -76,7 +75,7 @@ This step 2 command submits a PySpark job named pagerank.py to the Dataproc clus
 
 * **Step 3:** See the output
 
-OUTPUT:
+Output Sample:
 
 ![Output](./img/output.png)
 
