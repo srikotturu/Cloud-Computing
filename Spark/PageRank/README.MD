@@ -1,7 +1,7 @@
 # PageRank
 The objective of PageRank is to assign a numerical importance score to each webpage in a web graph based on its connectivity and the importance of the pages linking to it. The algorithm aims to determine the significance and relevance of web pages within the overall network of interlinked pages.
 
- [PageRank (Google Slides)](https://docs.google.com/presentation/d/1w5igZVfMjyY0ulmTlMfJGvTvrOv2ox6MTZANLD75UdM/edit?usp=sharing)
+ [PageRank (Google Slides)](https://docs.google.com/presentation/d/1IHXHAz43QLiH9H2HWAQXNT7e_2Lx1HDQ/edit?usp=sharing&ouid=100644709684739286941&rtpof=true&sd=true)
  
 # Introduction
 
