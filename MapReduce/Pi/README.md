@@ -1,7 +1,7 @@
 # Project Pi
 The objective of this project is to implement a MapReduce model using Hadoop-3.3.5 as the framework for calculating the value of pi.
 
- [Project Pi (Google Slides)](https://docs.google.com/presentation/d/1kydfigjA3PDWXfdRqKuzpYE8SLluslSmDUxsk6vPMkY/edit?usp=sharing)
+ [Project Pi (Google Slides)](https://docs.google.com/presentation/d/1tFK3jWo4Eap3z_REZm50LKX_uZ9Ijcsd/edit?usp=sharing&ouid=100644709684739286941&rtpof=true&sd=true)
  
 # Description
 
