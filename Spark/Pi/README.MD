@@ -47,7 +47,7 @@ code.
 
 * **Step 2:** Submit the PySpark job to Dataproc
 ```
-gcloud dataproc jobs submit pyspark pi.py --cluster=<cluster-name> --region=<region-of-cluster> -- --partitions <no-of-partitions>  <output-uri-path>
+gcloud dataproc jobs submit pyspark pi.py --cluster=<cluster-name> --region=<region-of-cluster> -- --partitions --output_uri <no-of-partitions>  <output-uri-path>
 ```
 This step 2 command submits a PySpark job named pi.py to the Dataproc cluster
 
