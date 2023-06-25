@@ -45,6 +45,17 @@ The higher PageRank of an Input Web Page the better.
 
 <img src="./img/cluster.png" alt="GCP" width="700"/>
 
+I wanted to find the pagerank of A,B,C in the following image:
+
+ <img src="./img/question.jpg" alt="GCP" />
+
+So, my input.txt is:
+
+A B <br>
+A C <br>
+B C <br>
+C A <br>
+
 ## To create and save the spark job python file:
 1. In the top right corner of the console, click the Activate Cloud Shell button.
 2. Once the Cloud Shell is activated, click on the Open Editor button in the top right
@@ -55,7 +66,7 @@ Here’s the Python code, I used:
 Save the file. I saved it as pagerank.py and close the shell. 
 
 
-## To Run the PySpark Job on Google Cloud Dataproc :
+## To Run the <b>PySpark</b> Job on Google Cloud Dataproc :
 
 * **Step 1:** Click on activate cloud shell like we did previously. Authenticate with Google Cloud Platform (GCP)
 If you encounter an authentication error, run the command:
@@ -69,7 +80,7 @@ code.
 
 * **Step 2:** Submit the PySpark job to Dataproc
 ```
-$ gcloud dataproc jobs submit pyspark pagerank.py --cluster=<cluster-name> --region=<region-of-cluster> -- <path-of-input-file> <number-of-iterations>
+$ gcloud dataproc jobs submit pyspark pagerank.py --cluster=<cluster-name> --region=<region-of-cluster> -- <path-of-input-file-from-bucket> <number-of-iterations>
 ```
 This step 2 command submits a PySpark job named pagerank.py to the Dataproc cluster
 
@@ -79,4 +90,46 @@ Output Sample:
 
 ![Output](./img/output.png)
 
+## To Run the <b>Scala </b> code Google Cloud Dataproc SSH :
 
+* **Step 1:** Connect to SSH
+1. Go to the Dataproc Cluster details page.
+2. Locate the cluster you created and click on the "SSH" button to open a terminal window.
+
+* **Step 2:** Execute the following commands in the SSH terminal:
+
+Download and setup `cs` (Coursier):
+```
+$ curl -fL https://github.com/coursier/coursier/releases/latest/download/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup
+```
+Set SCALA_HOME environment variable and add SCALA_HOME to the PATH::
+```
+$ export SCALA_HOME=/usr/local/share/scala
+$ export PATH=$PATH:$SCALA_HOME/
+```
+Create an input text file named input.txt and add the input data using a text editor:
+
+My input.txt is provided in the requirements above.
+
+```
+vi input.txt
+```
+Create a directory on HDFS and upload the input file. Then verify the file uploaded.
+``` 
+$ hdfs dfs -mkdir hdfs:///mydata
+$ hdfs dfs -put input.txt hdfs:///mydata
+$ hdfs dfs -ls hdfs:///mydata 
+```
+
+The last command should show the `input.txt` file in the `mydata` directory on HDFS.
+
+* **Step 4:** Run the PageRank Code
+1. Run the following command to start the Spark shell:
+```
+$ spark-shell
+```
+2. Once the Spark shell is started, copy and paste the contents of the `pagerank.scala` file into the shell.
+3. Press Enter to run the code.
+4. After the code execution, you will see the output with ranks for each key.
+
+Output: <img src="img/sc_output.png">
