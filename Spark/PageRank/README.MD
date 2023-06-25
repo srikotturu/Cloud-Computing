@@ -36,8 +36,9 @@ The damping factor ensures that not all the rank is distributed, helping to avoi
 The more Input Web Pages the better.
 
 The higher PageRank of an Input Web Page the better.
+<hr>
 
-# Implementation
+# Implementation (Using Pyspark)
 
 ## Requirements
 
@@ -90,6 +91,9 @@ Output Sample:
 
 ![Output](./img/output.png)
 
+<hr>
+
+# Implementation (Using Scala)
 ## To Run the <b>Scala </b> code Google Cloud Dataproc SSH :
 
 * **Step 1:** Connect to SSH
