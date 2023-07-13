@@ -56,6 +56,7 @@ Zone: Select the zone within the chosen region. <br>
 Cluster type: Choose the appropriate mode for your cluster (Standard or Single Node). <br>
 * Click the "Create" button to create the cluster. <br>
 
+
 6. Submit the job using the GCP Console:
 
 * In the Navigation menu, click on "Dataproc" under the "Big Data" section. <br>
@@ -67,6 +68,7 @@ Choose the region and cluster.<br>
 Job type: PySpark.<br>
 Main python file: gs://your-bucket-name/recommendation/recommendation.py<br>
 * Click the "Submit" button to submit the job.<br>
+
 
 7. Check the output.
 <img src="img/output.png" width="700">
