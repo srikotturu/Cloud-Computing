@@ -19,6 +19,15 @@ The movie recommendation system follows the Collaborative Filtering approach, wh
 4. Saving the model: The trained recommendation model can be saved to a specified location for future use and deployment.
 
 ## Implementation
+### Prerequisites
+
+- <b>Google Cloud Platform account:</b> Sign up for a Google Cloud Platform account if you don't have one.
+- <b>Google Cloud Storage bucket:</b> Create a GCS bucket to store the input data.
+- <b> Dataproc cluster:</b> Create a Dataproc cluster with the necessary configuration and access to the GCS bucket.
+
+<img src="img/cluster.png" width="500">
+
+### Steps
 
 The implementation involves the following steps:
 
@@ -42,8 +51,6 @@ cat converted_data.txt
 gsutil cp converted_data.txt gs://your-bucket-name/recommendation/
 ```
 5. Create a Dataproc cluster on GCP using the GCP Console.
-
-<img src="img/cluster.png" width="500">
 
 * Go to the Google Cloud Console: https://console.cloud.google.com <br>
 * Select your project. <br>
