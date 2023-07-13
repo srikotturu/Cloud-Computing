@@ -28,7 +28,7 @@ The implementation involves the following steps:
 gsutil cp gs://cs570-bigdata-pyspark/movielens.txt .
 ```
 2. Convert the movielens.txt data into the desired format:
-<img src="img/convert.png" width=400px>
+<img src="img/convert.png" width="400">
 
 ```
 cat movielens.txt | while read userid movieid rating timestamp; do echo "${userid},${movieid},${rating}"; done > converted_data.txt
@@ -43,7 +43,7 @@ gsutil cp converted_data.txt gs://your-bucket-name/recommendation/
 ```
 5. Create a Dataproc cluster on GCP using the GCP Console.
 
-<img src="img/cluster.png" width=500px>
+<img src="img/cluster.png" width="500">
 
 * Go to the Google Cloud Console: https://console.cloud.google.com <br>
 * Select your project. <br>
@@ -69,4 +69,4 @@ Main python file: gs://your-bucket-name/recommendation/recommendation.py<br>
 * Click the "Submit" button to submit the job.<br>
 
 7. Check the output.
-<img src="img/output.png" width=700px>
+<img src="img/output.png" width="700">
