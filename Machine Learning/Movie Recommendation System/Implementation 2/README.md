@@ -37,7 +37,7 @@ The program follows the following steps:
    - `ratings.csv`
    - `movies.csv`
    - `tags.csv`
-
+<img src="img/bucket.png" alt="bucket" width="550">
 2. Upload the `recommendation_engine.py` script to the same GCS bucket.
 
 3. Create a Dataproc cluster on Google Cloud Platform.
