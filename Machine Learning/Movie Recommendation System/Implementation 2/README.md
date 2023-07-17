@@ -40,8 +40,8 @@ The program follows the following steps:
 <img src="img/bucket.png" alt="bucket" width="350">
 2. Upload the `recommendation_engine.py` script to the same GCS bucket.
 
-3. Create a Dataproc cluster on Google Cloud Platform.
 
+3. Create a Dataproc cluster on Google Cloud Platform.
 
 * Go to the Google Cloud Console: https://console.cloud.google.com <br>
 * Select your project. <br>
